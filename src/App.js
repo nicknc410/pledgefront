@@ -18,7 +18,7 @@ function App() {
       const name = document.getElementById("pledgeName").value;
       const reason = document.getElementById("reason").value;
       const data = {"name":name, "reason": reason, "count": numFuckValue};
-      fetch("https://thetaxi.onrender.com/:3456/addFuck", {
+      fetch("https://thetaxi.onrender.com:3456/addFuck", {
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
@@ -30,7 +30,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://thetaxi.onrender.com/:3456/getFuck'); // Use the correct endpoint URL here
+      const response = await fetch('https://thetaxi.onrender.com:3456/getFuck'); // Use the correct endpoint URL here
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
