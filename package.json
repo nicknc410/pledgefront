@@ -2,11 +2,11 @@
     "name": "fullstack-app",
     "version": "1.0.0",
     "scripts": {
-      "install:backend": "cd server && npm install",
-      "install:frontend": "cd client && npm install",
+      "install:server": "cd server && npm install",
+      "install:client": "cd client && npm install",
       "install": "npm run install:server && npm run install:client",
-      "build:frontend": "cd client && npm run build",
-      "start:backend": "cd server && node server.js",
+      "build:client": "cd client && npm run build",
+      "start:server": "cd server && node server.js",
       "start": "npm run build:client && npm run start:server",
       "dev": "concurrently \"cd server && npm run dev\" \"cd frontend && npm start\""
     },
